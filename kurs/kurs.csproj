@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09C5F42B-E11A-4B85-8550-AFE4A043461E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>kurs</RootNamespace>
+    <AssemblyName>kurs</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="amplifier_editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="amplifier_editor.Designer.cs">
+      <DependentUpon>amplifier_editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="amplifier_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="amplifier_show.Designer.cs">
+      <DependentUpon>amplifier_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>baseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="amplifier_creater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="amplifier_creater.Designer.cs">
+      <DependentUpon>amplifier_creater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customers_creater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customers_creater.Designer.cs">
+      <DependentUpon>customers_creater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customer_delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customer_delete.Designer.cs">
+      <DependentUpon>customer_delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customer_editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customer_editor.Designer.cs">
+      <DependentUpon>customer_editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customer_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customer_show.Designer.cs">
+      <DependentUpon>customer_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="det_creater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="det_creater.Designer.cs">
+      <DependentUpon>det_creater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="det_delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="det_delete.Designer.cs">
+      <DependentUpon>det_delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="det_menu_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="det_menu_show.Designer.cs">
+      <DependentUpon>det_menu_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="det_one_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="det_one_show.Designer.cs">
+      <DependentUpon>det_one_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="det_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="det_show.Designer.cs">
+      <DependentUpon>det_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="good_creater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="good_creater.Designer.cs">
+      <DependentUpon>good_creater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gd_det_menu_create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gd_det_menu_create.Designer.cs">
+      <DependentUpon>gd_det_menu_create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gd_det_menu_delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gd_det_menu_delete.Designer.cs">
+      <DependentUpon>gd_det_menu_delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gd_det_menu_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gd_det_menu_show.Designer.cs">
+      <DependentUpon>gd_det_menu_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="good_delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="good_delete.Designer.cs">
+      <DependentUpon>good_delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="good_editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="good_editor.Designer.cs">
+      <DependentUpon>good_editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="good_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="good_show.Designer.cs">
+      <DependentUpon>good_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="guitar_editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="guitar_editor.Designer.cs">
+      <DependentUpon>guitar_editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="guitar_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="guitar_show.Designer.cs">
+      <DependentUpon>guitar_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inst_delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inst_delete.Designer.cs">
+      <DependentUpon>inst_delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inst_editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inst_editor.Designer.cs">
+      <DependentUpon>inst_editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="order_creater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="order_creater.Designer.cs">
+      <DependentUpon>order_creater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="order_delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="order_delete.Designer.cs">
+      <DependentUpon>order_delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="order_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="order_show.Designer.cs">
+      <DependentUpon>order_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pedal_editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pedal_editor.Designer.cs">
+      <DependentUpon>pedal_editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pedal_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pedal_show.Designer.cs">
+      <DependentUpon>pedal_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sc_editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sc_editor.Designer.cs">
+      <DependentUpon>sc_editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="seller_creater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seller_creater.Designer.cs">
+      <DependentUpon>seller_creater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inst_menu_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inst_menu_show.Designer.cs">
+      <DependentUpon>inst_menu_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inst_menu_creater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inst_menu_creater.Designer.cs">
+      <DependentUpon>inst_menu_creater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main_menu.Designer.cs">
+      <DependentUpon>main_menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="seller_delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seller_delete.Designer.cs">
+      <DependentUpon>seller_delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="seller_editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seller_editor.Designer.cs">
+      <DependentUpon>seller_editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="seller_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seller_show.Designer.cs">
+      <DependentUpon>seller_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sell_cust_menu_create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sell_cust_menu_create.Designer.cs">
+      <DependentUpon>sell_cust_menu_create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sell_cust_menu_delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sell_cust_menu_delete.Designer.cs">
+      <DependentUpon>sell_cust_menu_delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sell_cust_menu_show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sell_cust_menu_show.Designer.cs">
+      <DependentUpon>sell_cust_menu_show.cs</DependentUpon>
+    </Compile>
+    <Compile Include="start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="start.Designer.cs">
+      <DependentUpon>start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pedal_creater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pedal_creater.Designer.cs">
+      <DependentUpon>pedal_creater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="guitar_creater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="guitar_creater.Designer.cs">
+      <DependentUpon>guitar_creater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="guitar_tab_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="guitar_tab_form.Designer.cs">
+      <DependentUpon>guitar_tab_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="amplifier_creater.resx">
+      <DependentUpon>amplifier_creater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amplifier_editor.resx">
+      <DependentUpon>amplifier_editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amplifier_show.resx">
+      <DependentUpon>amplifier_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customers_creater.resx">
+      <DependentUpon>customers_creater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer_delete.resx">
+      <DependentUpon>customer_delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer_editor.resx">
+      <DependentUpon>customer_editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer_show.resx">
+      <DependentUpon>customer_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="det_creater.resx">
+      <DependentUpon>det_creater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="det_delete.resx">
+      <DependentUpon>det_delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="det_menu_show.resx">
+      <DependentUpon>det_menu_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="det_one_show.resx">
+      <DependentUpon>det_one_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="det_show.resx">
+      <DependentUpon>det_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gd_det_menu_delete.resx">
+      <DependentUpon>gd_det_menu_delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gd_det_menu_show.resx">
+      <DependentUpon>gd_det_menu_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="good_creater.resx">
+      <DependentUpon>good_creater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gd_det_menu_create.resx">
+      <DependentUpon>gd_det_menu_create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="good_delete.resx">
+      <DependentUpon>good_delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="good_editor.resx">
+      <DependentUpon>good_editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="good_show.resx">
+      <DependentUpon>good_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="guitar_editor.resx">
+      <DependentUpon>guitar_editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="guitar_show.resx">
+      <DependentUpon>guitar_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inst_delete.resx">
+      <DependentUpon>inst_delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inst_editor.resx">
+      <DependentUpon>inst_editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="order_creater.resx">
+      <DependentUpon>order_creater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="order_delete.resx">
+      <DependentUpon>order_delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="order_show.resx">
+      <DependentUpon>order_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pedal_editor.resx">
+      <DependentUpon>pedal_editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pedal_show.resx">
+      <DependentUpon>pedal_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sc_editor.resx">
+      <DependentUpon>sc_editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="seller_creater.resx">
+      <DependentUpon>seller_creater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inst_menu_show.resx">
+      <DependentUpon>inst_menu_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main_menu.resx">
+      <DependentUpon>main_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="guitar_creater.resx">
+      <DependentUpon>guitar_creater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="guitar_tab_form.resx">
+      <DependentUpon>guitar_tab_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inst_menu_creater.resx">
+      <DependentUpon>inst_menu_creater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pedal_creater.resx">
+      <DependentUpon>pedal_creater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="seller_delete.resx">
+      <DependentUpon>seller_delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="seller_editor.resx">
+      <DependentUpon>seller_editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="seller_show.resx">
+      <DependentUpon>seller_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sell_cust_menu_create.resx">
+      <DependentUpon>sell_cust_menu_create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sell_cust_menu_delete.resx">
+      <DependentUpon>sell_cust_menu_delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sell_cust_menu_show.resx">
+      <DependentUpon>sell_cust_menu_show.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="start.resx">
+      <DependentUpon>start.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="baseDataSet.xsc">
+      <DependentUpon>baseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="baseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>baseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="baseDataSet.xss">
+      <DependentUpon>baseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="base.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="base_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>base.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\1.jpg" />
+    <None Include="Resources\b_touch.png" />
+    <None Include="Resources\premium-icon-panic-button-2045652.png" />
+    <None Include="Resources\free-icon-close-button-61155.png" />
+    <None Include="Resources\premium-icon-thumbtacks-2672102.png" />
+    <None Include="Resources\premium-icon-thumbtacks-2672101.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\menu21.png" />
+    <None Include="Resources\menu3.jpg" />
+    <None Include="Resources\menu4.jpg" />
+    <None Include="Resources\menu2.png" />
+    <None Include="Resources\menu1.jpg" />
+    <None Include="Resources\yamaha1.jpg" />
+    <None Include="Resources\yamaha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

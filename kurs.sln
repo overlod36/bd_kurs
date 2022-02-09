@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kurs", "kurs\kurs.csproj", "{09C5F42B-E11A-4B85-8550-AFE4A043461E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09C5F42B-E11A-4B85-8550-AFE4A043461E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09C5F42B-E11A-4B85-8550-AFE4A043461E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09C5F42B-E11A-4B85-8550-AFE4A043461E}.Debug|x86.ActiveCfg = Debug|x86
+		{09C5F42B-E11A-4B85-8550-AFE4A043461E}.Debug|x86.Build.0 = Debug|x86
+		{09C5F42B-E11A-4B85-8550-AFE4A043461E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09C5F42B-E11A-4B85-8550-AFE4A043461E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09C5F42B-E11A-4B85-8550-AFE4A043461E}.Release|x86.ActiveCfg = Release|x86
+		{09C5F42B-E11A-4B85-8550-AFE4A043461E}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A36F28E-7889-4927-9FD7-9A2EA1293270}
+	EndGlobalSection
+EndGlobal
